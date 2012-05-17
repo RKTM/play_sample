@@ -10,3 +10,7 @@ dist
 .classpath
 .project
 .settings
+
+
+.cache
+.tmp*

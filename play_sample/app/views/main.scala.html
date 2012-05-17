@@ -1,15 +1,26 @@
-@(title: String)(content: Html)
+@(content: Html)
 
 <!DOCTYPE html>
 
 <html>
     <head>
-        <title>@title</title>
+        <title>sample</title>
         <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.css")">
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
         <script src="@routes.Assets.at("javascripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
     </head>
     <body>
+      <div class="navbar">
+        <div class="navbar-inner">
+          <div class="container">
+          	<a href="@routes.FormSample.index" class="brand">sample</a>
+		    <ul class="nav">
+		      <li><a href="@routes.FormSample.index">form sample</a></li>
+		    </ul>
+          </div>
+        </div>
+      </div>
         @content
     </body>
 </html>

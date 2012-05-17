@@ -1,0 +1,24 @@
+@(userForm: Form[User])
+
+@import helper._
+
+@main {
+
+  @*
+  formタグを生成するヘルパー 
+  *@
+  @helper.form(action = routes.FormSample.submit) {
+  
+    @*
+	input type="text" を生成するヘルパー。
+	'_showConstraints：Formに定義した制約を表示するかどうか。
+	'_showErrors：入力値にエラーがあった場合にそれを表示するかどうか。
+	*@  
+    @helper.inputText(userForm("name"), '_label -> "Name",'_showConstraints -> false, '_showErrors -> true)
+    
+    @helper.inputText(userForm("age"), '_label -> "Age")
+	
+	<input type="submit" value='SUBMIT'>
+    
+  }
+}

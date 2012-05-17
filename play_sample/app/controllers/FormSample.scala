@@ -1,10 +1,9 @@
 package controllers
 
-import play.api.data.Forms._
 import play.api.data.Forms.mapping
 import play.api.data.Forms.number
 import play.api.data.Forms.text
-import play.api.data.validation.Constraints._
+import play.api.data.validation.Constraints.nonEmpty
 import play.api.data.Form
 import play.api.mvc.Action
 import play.api.mvc.Controller
@@ -41,7 +40,7 @@ object FormSample extends Controller {
 	          Logger.info("NG")
 	          //formでエラーがあった場合の処理
 	          
-	          BadRequest(views.html.sample_form(formWithErrors))
+	          BadRequest(views.html.sample_form(formWithErrors)) //400を返す
 	        },
 	        userForm => {
 	          Logger.info("OK")

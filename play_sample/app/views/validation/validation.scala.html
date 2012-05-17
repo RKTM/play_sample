@@ -1,0 +1,23 @@
+@(validarionForm: Form[DataX])
+
+@main {
+
+	@*
+	formに設定されたglobalなエラーを表示
+	*@
+    @validarionForm.globalError.map { error =>
+        <p class="error">
+            @error.message
+        </p>
+    }
+
+  @helper.form(action = routes.Validation.submit) {
+  
+    @helper.inputText(validarionForm("par1"))
+    
+    @helper.inputText(validarionForm("par2"))
+	
+	<input type="submit" value='SUBMIT'>
+    
+  }
+}

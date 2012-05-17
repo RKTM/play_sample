@@ -26,7 +26,7 @@ object FormSample extends Controller {
   def submit = Action { implicit request =>
 
     //def bindFromRequest ()(implicit request: play.api.mvc.Request[_]): Form[T]
-    //リクエストのデータをformにバインドして、そのformが戻り値になる。
+    //リクエストのデータをformにバインドする。戻り値はそのform。
     userForm.bindFromRequest.
 
 	    //def fold [R] (hasErrors: (Form[T]) ⇒ R, success: (T) ⇒ R): R

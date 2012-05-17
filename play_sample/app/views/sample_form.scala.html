@@ -13,7 +13,10 @@
 	input type="text" を生成するヘルパー。
 	'_showConstraints：Formに定義した制約を表示するかどうか。
 	'_showErrors：入力値にエラーがあった場合にそれを表示するかどうか。
-	*@  
+	*@
+	@*
+	 リテラルでformのプロパティを参照するのは避けたいのだけど、他に方法はない？
+	*@
     @helper.inputText(userForm("name"), '_label -> "Name",'_showConstraints -> false, '_showErrors -> true)
     
     @helper.inputText(userForm("age"), '_label -> "Age")
